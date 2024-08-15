@@ -42,7 +42,7 @@ test.only('Dropdown Selection', async ({page}) =>{
 
     await page.selectOption('#country', 'Japan')
 
-    const selectedOption = await page.$eval('#country option:checked', el => el.textContent);
+    const selectedOption = await page.$eval('#country option:checked', element => element.textContent);
     // console.log("Dropdown current selecting: ", selectedOption)
 
     await expect(selectedOption).toBe('Japan')
