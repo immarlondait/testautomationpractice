@@ -15,7 +15,7 @@ test('Dropdown num options', async ({page}) =>{
 
 })
 
-test.only('Dropdown order', async ({page}) =>{
+test('Dropdown order', async ({page}) =>{
     
     const countryOrder = ['United States', 'Canada', 'United Kingdom', 
                           'Germany', 'France', 'Australia', 
@@ -33,4 +33,19 @@ test.only('Dropdown order', async ({page}) =>{
         await expect(await value).toContain(countryOrder[index])
         index++
     }
+})
+
+test.only('Dropdown Selection', async ({page}) =>{
+    
+    await page.goto('https://testautomationpractice.blogspot.com/')
+    await expect(page).toHaveURL('https://testautomationpractice.blogspot.com/')
+
+    await page.selectOption('#country', 'Japan')
+
+    const selectedOption = await page.$eval('#country option:checked', el => el.textContent);
+    // console.log("Dropdown current selecting: ", selectedOption)
+
+    await expect(selectedOption).toBe('Japan')
+    
+    
 })
