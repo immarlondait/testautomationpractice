@@ -35,7 +35,7 @@ test('Dropdown order', async ({page}) =>{
     }
 })
 
-test.only('Dropdown Selection', async ({page}) =>{
+test('Dropdown Selection', async ({page}) =>{
     
     await page.goto('https://testautomationpractice.blogspot.com/')
     await expect(page).toHaveURL('https://testautomationpractice.blogspot.com/')
