@@ -44,7 +44,7 @@ test('Handling Table', async ({page}) =>{
     }
 
 
-    await page.waitForTimeout(2000) //pausing execution, give you time to get eyes on it
+    await page.waitForTimeout(2000)
     
 })
 
