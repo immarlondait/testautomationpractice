@@ -4,8 +4,8 @@ test('Handling Table', async ({page}) =>{
 
     await page.goto('https://testautomationpractice.blogspot.com/')
 
-    const rows = await page.locator('#HTML1 table tbody tr')
-    
+    const rows = await page.$$('#HTML1 table tbody tr')
+
 
 
     
