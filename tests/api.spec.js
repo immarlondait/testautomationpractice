@@ -15,20 +15,8 @@ test("API - Status test - 404 not found", async ({request}) => {
 
 })
 
-test("GET request - Get Single User Detail", async ({request}) => {
-    const response = await request.get('https://reqres.in/api/users/1')
-    const responseBody = JSON.parse(await response.text())
-    //console.log(responseBody)
 
-    expect(response.status()).toBe(200)
-
-    expect(responseBody.data.id).toBe(1) // .data.id used here from JSON object
-    expect(responseBody.data.first_name).toBe("George")
-    expect(responseBody.data.last_name).toBe("Bluth")
-    expect(responseBody.data.email).toBeTruthy()
-})
-
-test.only("GET request - List of Users", async ({request}) => {
+test("GET request - List of Users", async ({request}) => {
     const pagenum = 1
     const response = await request.get(`https://reqres.in/api/users?page=${pagenum}`)
     expect(response).toBeTruthy()
@@ -43,6 +31,51 @@ test.only("GET request - List of Users", async ({request}) => {
 
 
 })
+
+test("GET request - Get Single User Detail", async ({request}) => {
+    const response = await request.get('https://reqres.in/api/users/1')
+    const responseBody = JSON.parse(await response.text())
+    //console.log(responseBody)
+
+    expect(response.status()).toBe(200)
+
+    expect(responseBody.data.id).toBe(1) // .data.id used here from JSON object
+    expect(responseBody.data.first_name).toBe("George")
+    expect(responseBody.data.last_name).toBe("Bluth")
+    expect(responseBody.data.email).toBeTruthy()
+})
+
+test("GET request - List <Resource>", async ({request}) => {
+    const response = await request.get('https://reqres.in/api/unknown')
+    expect(response.status()).toBe(200)
+    
+    const responseBody = JSON.parse(await response.text())
+    //console.log(responseBody)
+
+    expect(responseBody.page).toBe(1)
+    expect(responseBody.per_page).toBe(6)
+    expect(responseBody.total).toBeGreaterThanOrEqual(0)
+    expect(responseBody.total_pages).toBeGreaterThanOrEqual(0)
+
+    expect(responseBody.data).toBeTruthy()
+})
+
+test("GET request - Single <Resource>", async ({request}) => {
+    const response = await request.get('https://reqres.in/api/unknown/2')
+    expect(response.status()).toBe(200)
+    
+    const responseBody = JSON.parse(await response.text())
+    //console.log(responseBody)
+
+    expect(responseBody.data).toBeTruthy()
+    expect(responseBody.data.id).toBe(2)
+    expect(responseBody.data.name).toBe("fuchsia rose")
+    expect(responseBody.data.year).toBe(2001)
+    expect(responseBody.data.color).toBe("#C74375")
+    expect(responseBody.data.pantone_value).toBe("17-2031")
+})
+
+
 
 test("POST request - Create New User", async ({request}) => {
     const response = await request.post('https://reqres.in/api/users', {
@@ -118,8 +151,5 @@ test("PUT request - Update User", async ({request}) => {
 test("DELETE request - Delete User", async ({request}) => {
     const response = await request.delete('https://reqres.in/api/users/2')
     expect(response.status()).toBe(204)
-
-    
-
 })
 
