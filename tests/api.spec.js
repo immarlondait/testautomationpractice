@@ -1,21 +1,21 @@
 import {test, expect} from "@playwright/test"
 
 
-test("API - Status test - valid", async ({request}) => {
+test("API - Status test - 200 success", async ({request}) => {
 
     const response = await request.get('https://reqres.in/api/users/3')
     await expect(response.status()).toBe(200)
 
 })
 
-test("API - Status test - invalid", async ({request}) => {
+test("API - Status test - 404 not found", async ({request}) => {
 
     const response = await request.get('https://reqres.in/api/users/asdf')
     await expect(response.status()).toBe(404)
 
 })
 
-test("GET request - Get User Detail", async ({request}) => {
+test("GET request - Get Single User Detail", async ({request}) => {
     const response = await request.get('https://reqres.in/api/users/1')
     const responseBody = JSON.parse(await response.text())
     //console.log(responseBody)
@@ -26,6 +26,22 @@ test("GET request - Get User Detail", async ({request}) => {
     expect(responseBody.data.first_name).toBe("George")
     expect(responseBody.data.last_name).toBe("Bluth")
     expect(responseBody.data.email).toBeTruthy()
+})
+
+test.only("GET request - List of Users", async ({request}) => {
+    const pagenum = 1
+    const response = await request.get(`https://reqres.in/api/users?page=${pagenum}`)
+    expect(response).toBeTruthy()
+
+    const responseBody = JSON.parse(await response.text())
+
+    // console.log(responseBody)
+    expect(responseBody.page).toBe(pagenum)
+    expect(responseBody.per_page).toBe(6)
+    expect(responseBody.total).toBe(12)
+    expect(responseBody.data).toBeTruthy()
+
+
 })
 
 test("POST request - Create New User", async ({request}) => {
@@ -106,3 +122,4 @@ test("DELETE request - Delete User", async ({request}) => {
     
 
 })
+
