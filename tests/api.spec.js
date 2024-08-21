@@ -179,7 +179,7 @@ test("DELETE request - Delete User", async ({request}) => {
     expect(check.status()).toBe(404)
 })
 
-test.only("POST request - Register user, successful", async ({request}) => {
+test("POST request - Register user, successful", async ({request}) => {
     const response = await request.post(`https://reqres.in/api/register`, {
         data: {
             email: "eve.holt@reqres.in",
