@@ -1,5 +1,10 @@
 import {test, expect} from "@playwright/test"
 
+//run in serial since we'll create a user then edit then delete in different tests
+test.describe.configure({mode: 'serial'})
+
+var userid
+
 
 test("API - Status test - 200 success", async ({request}) => {
 
@@ -91,9 +96,46 @@ test("POST request - Create New User", async ({request}) => {
     expect(responseBody.name).toBe("Marionetto")
     expect(responseBody.job).toBe("Storyteller")
     expect(responseBody.id).toBeTruthy()
+    userid = await responseBody.id
     expect(responseBody.createdAt).toBeTruthy()
 
 })
+
+test("PUT request - Edit User", async ({request}) => {
+    const response = await request.put(`https://reqres.in/api/users/${userid}`, {
+        data: {
+            name: "Marionetto (updated)",
+            job: "San Antonio Resident (updated)"
+        }
+    })
+    expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+    //console.log(responseBody)
+    expect(responseBody.name).toBe("Marionetto (updated)")
+    expect(responseBody.job).toBe("San Antonio Resident (updated)")
+    expect(responseBody.updatedAt).toBeTruthy()
+
+})
+
+test("PATCH request - Edit User", async ({request}) => {
+    const response = await request.put(`https://reqres.in/api/users/${userid}`, {
+        data: {
+            name: "Marionetto (updated v2)",
+            job: "San Antonio Resident (updated v2)"
+        }
+    })
+    expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+    //console.log(responseBody)
+    expect(responseBody.name).toBe("Marionetto (updated v2)")
+    expect(responseBody.job).toBe("San Antonio Resident (updated v2)")
+    expect(responseBody.updatedAt).toBeTruthy()
+
+})
+
+
 
 test("POST request - Login Success", async ({request}) => {
     const response = await request.post('https://reqres.in/api/login', {
@@ -121,35 +163,42 @@ test("POST request - Login Failed", async ({request}) => {
     })
     expect(response.status()).toBe(400)
 
-    const responseBody = JSON.parse(await response.text())
-    
+    //const responseBody = JSON.parse(await response.text())
     //console.log(responseBody)
     
 
 })
 
-test("PUT request - Update User", async ({request}) => {
-    const response = await request.put('https://reqres.in/api/users/2', {
+
+
+test("DELETE request - Delete User", async ({request}) => {
+    const response = await request.delete(`https://reqres.in/api/users/${userid}`)
+    expect(response.status()).toBe(204)
+
+    const check = await request.get(`https://reqres.in/api/users/${userid}`)
+    expect(check.status()).toBe(404)
+})
+
+test.only("POST request - Register user, successful", async ({request}) => {
+    const response = await request.post(`https://reqres.in/api/register`, {
         data: {
-            name: "neo",
-            job: "the one"
+            email: "eve.holt@reqres.in",
+            password: "pistol"
         }
     })
     expect(response.status()).toBe(200)
 
+    console.log(await response.text())
+
     const responseBody = JSON.parse(await response.text())
+
+    // now we find user
+    let myID = responseBody.id
+    const registeredUser = await request.get(`https://reqres.in/api/users/${myID}`)
+    expect(registeredUser.status()).toBe(200)
+
     
-    //console.log(responseBody)
 
-    expect(responseBody.name).toBe("neo")
-    expect(responseBody.job).toBe("the one")
-    expect(responseBody.updatedAt).toBeTruthy()
     
-
+    
 })
-
-test("DELETE request - Delete User", async ({request}) => {
-    const response = await request.delete('https://reqres.in/api/users/2')
-    expect(response.status()).toBe(204)
-})
-
