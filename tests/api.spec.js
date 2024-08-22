@@ -188,7 +188,7 @@ test("POST request - Register user, successful", async ({request}) => {
     })
     expect(response.status()).toBe(200)
 
-    console.log(await response.text())
+    //console.log(await response.text())
 
     const responseBody = JSON.parse(await response.text())
 
@@ -198,7 +198,14 @@ test("POST request - Register user, successful", async ({request}) => {
     expect(registeredUser.status()).toBe(200)
 
     
+})
 
-    
-    
+test("POST request - Register user, unsuccessful", async ({request}) => {
+    const response = await request.post(`https://reqres.in/api/register`, {
+        data: {
+            email: "sydney@fife",
+        }
+    })
+    expect(response.status()).toBe(400)
+
 })
