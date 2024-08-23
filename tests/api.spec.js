@@ -163,7 +163,8 @@ test("POST request - Login Failed", async ({request}) => {
     })
     expect(response.status()).toBe(400)
 
-    //const responseBody = JSON.parse(await response.text())
+    const responseBody = JSON.parse(await response.text())
+    expect(responseBody.error).toBe("Missing password")
     //console.log(responseBody)
     
 
