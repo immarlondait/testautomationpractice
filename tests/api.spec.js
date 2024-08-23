@@ -212,3 +212,14 @@ test("POST request - Register user, unsuccessful", async ({request}) => {
     expect(responseBody.error).toBe("Missing password")
 
 })
+
+test("GET request - Delayed Response", async ({request}) => {
+    const response = await request.post(`https://reqres.in/api/users?delay=3`)
+    
+
+    expect(response.status()).toBe(201)
+
+    // const responseBody = JSON.parse(await response.text())
+    
+
+})
