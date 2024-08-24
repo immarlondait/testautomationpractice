@@ -149,7 +149,7 @@ test("POST request - Login Success", async ({request}) => {
     const responseBody = JSON.parse(await response.text())
     
     //console.log(responseBody)
-    expect(responseBody.token).toBeTruthy()
+    expect(responseBody.token).toBe('QpwL5tke4Pnpja7X4')
 
 
 })
