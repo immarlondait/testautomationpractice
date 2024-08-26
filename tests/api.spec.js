@@ -11,6 +11,8 @@ test("API - Status test - 200 success", async ({request}) => {
     const response = await request.get('https://reqres.in/api/users/3')
     await expect(response.status()).toBe(200)
 
+
+
 })
 
 test("API - Status test - 404 not found", async ({request}) => {
