@@ -36,6 +36,12 @@ test("Character API - Character List", async ({request}) => {
     await expect(response.status()).toBe(200)
 
     const responseBody = JSON.parse(await response.text())
+
+    // for(const i=1; i<11; i++){
+    //     await expect(responseBody).toContain(process.env.characters[i])
+    // }
+    // TO DO fix above so we can move the character identities below to .env file
+
     await expect(responseBody).toContain("Yokai")
     await expect(responseBody).toContain("Poufsouffle")
     await expect(responseBody).toContain("Rinne Snow")
