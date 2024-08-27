@@ -22,6 +22,7 @@ test("API - Status test - 404 not found", async ({request}) => {
 
 })
 
+// #region GET requests
 
 test("GET request - List of Users", async ({request}) => {
     const pagenum = 1
@@ -81,6 +82,19 @@ test("GET request - Single <Resource>", async ({request}) => {
     expect(responseBody.data.color).toBe("#C74375")
     expect(responseBody.data.pantone_value).toBe("17-2031")
 })
+
+test("GET request - Delayed Response", async ({request}) => {
+    const response = await request.post(`https://reqres.in/api/users?delay=3`)
+    
+
+    expect(response.status()).toBe(201)
+
+    // const responseBody = JSON.parse(await response.text())
+    
+
+})
+
+//#endregion
 
 
 
@@ -218,13 +232,4 @@ test("POST request - Register user, unsuccessful", async ({request}) => {
 
 })
 
-test("GET request - Delayed Response", async ({request}) => {
-    const response = await request.post(`https://reqres.in/api/users?delay=3`)
-    
 
-    expect(response.status()).toBe(201)
-
-    // const responseBody = JSON.parse(await response.text())
-    
-
-})

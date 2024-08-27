@@ -39,6 +39,12 @@ test("Character API - Character List", async ({request}) => {
 
     const myChars = process.env.characters.split(',')
     console.log(myChars)
+
+    // outer loop to go through responseBody
+    // inner loop to check for a match in myChars
+
+    // this doesn't seem like the best way to do this
+    // but responseBody will return a list of recently played chars instead of a sorted list
     
 
 
