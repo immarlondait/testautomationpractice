@@ -1,8 +1,6 @@
 import {test, expect} from "@playwright/test"
 require('dotenv').config()
 
-//run in serial since we'll create a user then edit then delete in different tests
-test.describe.configure({mode: 'serial'})
 
 const apiKey = process.env.access_token
 
