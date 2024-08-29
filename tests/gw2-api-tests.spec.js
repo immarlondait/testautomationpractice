@@ -38,6 +38,8 @@ test("Character API - Character List", async ({request}) => {
     const myChars = process.env.characters.split(',')
     console.log(myChars)
 
+    // updated github workflow
+
     // outer loop to go through responseBody
     // inner loop to check for a match in myChars
 
