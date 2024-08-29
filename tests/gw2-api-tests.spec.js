@@ -36,7 +36,7 @@ test("Character API - Character List", async ({request}) => {
     const responseBody = JSON.parse(await response.text())
 
     const myChars = process.env.characters.split(',')
-    console.log(myChars)
+    // console.log(myChars)
 
     // updated github workflow
 
