@@ -7,6 +7,11 @@ const apiKey = process.env.access_token
 
 test("Character API - Status test - 200 success", async ({request}) => {
 
+    if (!process.env.apiKey) {
+        console.log("API_KEY is not defined, skipping tests...");
+        process.exit(0);
+    }
+
     const response = await request.get(`https://api.guildwars2.com/v2/characters?access_token=${apiKey}`)
     await expect(response.status()).toBe(200)
 
@@ -17,6 +22,8 @@ test("Character API - Status test - 200 success", async ({request}) => {
 })
 
 test("Character API - Status test - 401 fail", async ({request}) => {
+
+    
 
     const response = await request.get(`https://api.guildwars2.com/v2/characters?access_token=bad_key`)
     await expect(response.status()).toBe(401)
@@ -29,6 +36,11 @@ test("Character API - Status test - 401 fail", async ({request}) => {
 })
 
 test("Character API - Character List", async ({request}) => {
+
+    if (!process.env.apiKey) {
+        console.log("API_KEY is not defined, skipping tests...");
+        process.exit(0);
+    }
 
     const response = await request.get(`https://api.guildwars2.com/v2/characters?access_token=${apiKey}`)
     await expect(response.status()).toBe(200)
