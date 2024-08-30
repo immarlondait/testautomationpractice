@@ -10,7 +10,7 @@ test('Dropdown num options', async ({page}) =>{
     const options = await page.$$('#country option')
     
 
-    console.log("Number of options: ", options.length)
+    //console.log("Number of options: ", options.length)
     await expect(options.length).toBe(numOfOptions)
 
 })

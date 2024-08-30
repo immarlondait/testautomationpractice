@@ -36,7 +36,7 @@ test('Handling Table', async ({page}) =>{
             for(let j=0; j<await tds.count()-1; j++){ 
                 //column loop
                 //'-1' since we don't need last column, checkboxes
-                console.log(await tds.nth(j).textContent())
+                //console.log(await tds.nth(j).textContent())
             }
         }
         await page.waitForTimeout(1000)
