@@ -19,10 +19,14 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+    
+      env:
+        API_KEY: ${{ secrets.APIKEY }}
+        DB_HOST: ${{ secrets.CHARACTERS }}
       
     - name: Set up environment variables
       run: |
-        echo "apiKey=${{ secrets.API_KEY }}" >> .env
+        echo "apiKey=${{ secrets.APIKEY }}" >> .env
         echo "characters=${{ secrets.CHARACTERS }}" >> .env
     
     - uses: actions/upload-artifact@v4
