@@ -13,10 +13,11 @@ test("Character API - Status test - 200 success", async ({request}) => {
     }
 
     const response = await request.get(`https://api.guildwars2.com/v2/characters?access_token=${apiKey}`)
+
     await expect(response.status()).toBe(200)
 
     //const responseBody = JSON.parse(await response.text())
-
+    // 
     //console.log(responseBody)
 
 })
