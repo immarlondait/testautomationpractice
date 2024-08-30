@@ -8,10 +8,10 @@ test('Handling Table', async ({page}) =>{
 
     // total number of rows and columns
     const columns = await table.locator('thead tr th') //table head, table row, table header
-    console.log("Number of columns: ", await columns.count())
+    //console.log("Number of columns: ", await columns.count())
 
     const rows = await table.locator('tbody tr') //table body, table row
-    console.log("Number of rows: ", await rows.count())
+    //console.log("Number of rows: ", await rows.count())
     
     expect(await columns.count()).toBe(4)
     expect(await rows.count()).toBe(5)
@@ -20,7 +20,7 @@ test('Handling Table', async ({page}) =>{
 
     // read data from all pages in the table
     const pages = await page.locator('.pagination li a') //'a' anchor
-    console.log("Number of pages for table: ", await pages.count())
+    //console.log("Number of pages for table: ", await pages.count())
     for(let p=0; p<await pages.count(); p++){
         //pagination loop
         
