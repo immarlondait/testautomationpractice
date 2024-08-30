@@ -19,9 +19,18 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+      
+    - name: Set up environment variables
+      run: |
+        echo "apiKey=${{ secrets.API_KEY }}" >> .env
+        echo "characters=${{ secrets.CHARACTERS }}" >> .env
+    
     - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+
+    - name: Clean up .env file
+      run: rm .env
