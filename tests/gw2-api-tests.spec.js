@@ -24,8 +24,8 @@ test("Character API - Status test - 200 success", async ({request}) => {
 
 test("Character API - Status test - 401 fail", async ({request}) => {
 
-    if (!process.env.apiKey) {
-        console.log("API_KEY is not defined, skipping tests...");
+    if (!process.env.characters) {
+        console.log("CHARACTERS is not defined, skipping tests...");
         process.exit(0);
     }
     
@@ -42,8 +42,8 @@ test("Character API - Status test - 401 fail", async ({request}) => {
 
 test("Character API - Character List", async ({request}) => {
 
-    if (!process.env.apiKey) {
-        console.log("API_KEY is not defined, skipping tests...");
+    if (!process.env.characters) {
+        console.log("CHARACTERS is not defined, skipping tests...");
         process.exit(0);
     }
 
