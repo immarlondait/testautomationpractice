@@ -31,3 +31,6 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+
+    - name: Clean up .env file
+      run: rm .env
