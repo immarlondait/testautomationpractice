@@ -11,7 +11,7 @@ test('Handling Table', async ({page}) =>{
     //console.log(rows.length)
     for (let i=1; i<rows.length; i++){
         // starting at 1 since 0 is headers
-        console.log(rows.values())
+        // console.log(rows.values())
     }
 
     
