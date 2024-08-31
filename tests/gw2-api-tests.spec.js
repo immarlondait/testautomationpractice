@@ -52,7 +52,7 @@ test("Character API - Character List", async ({request}) => {
 
     const responseBody = JSON.parse(await response.text())
 
-    const myChars = process.env.characters.split(',')
+    // const myChars = process.env.characters.split(',')
     // console.log(myChars)
 
     // updated github workflow
@@ -72,16 +72,16 @@ test("Character API - Character List", async ({request}) => {
 
     
 
-    // await expect(responseBody).toContain("Yokai")
-    // await expect(responseBody).toContain("Poufsouffle")
-    // await expect(responseBody).toContain("Rinne Snow")
-    // await expect(responseBody).toContain("Yokai The Engineer")
-    // await expect(responseBody).toContain("Brynndalynn")
-    // await expect(responseBody).toContain("Yokai The Warrior")
-    // await expect(responseBody).toContain("Ein The Fox")
-    // await expect(responseBody).toContain("Nocte Cereus")
-    // await expect(responseBody).toContain("Yokai Bank")
-    // await expect(responseBody).toContain("Yokai The Ranger")
+    await expect(responseBody).toContain("Yokai")
+    await expect(responseBody).toContain("Poufsouffle")
+    await expect(responseBody).toContain("Rinne Snow")
+    await expect(responseBody).toContain("Yokai The Engineer")
+    await expect(responseBody).toContain("Brynndalynn")
+    await expect(responseBody).toContain("Yokai The Warrior")
+    await expect(responseBody).toContain("Ein The Fox")
+    await expect(responseBody).toContain("Nocte Cereus")
+    await expect(responseBody).toContain("Yokai Bank")
+    await expect(responseBody).toContain("Yokai The Ranger")
 
 
 })
