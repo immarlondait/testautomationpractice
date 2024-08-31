@@ -2,7 +2,7 @@ import {test, expect} from "@playwright/test"
 require('dotenv').config()
 
 
-const apiKey = process.env.access_token
+const API_KEY = process.env.API_KEY
 
 
 test("Character API - Status test - 200 success", async ({request}) => {
