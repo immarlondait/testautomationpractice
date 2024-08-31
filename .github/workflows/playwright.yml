@@ -28,6 +28,7 @@ jobs:
       run: |
         echo "apiKey=${{ secrets.APIKEY }}" >> .env
         echo "characters=${{ secrets.CHARACTERS }}" >> .env
+        IFS=',' read -ra characters <<< "${{ secrets.CHARACTERS }}"
     
     - uses: actions/upload-artifact@v4
       if: always()
