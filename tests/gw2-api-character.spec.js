@@ -43,31 +43,10 @@ test("Character API - Status test - 401 fail", async ({request}) => {
 
 // endregion
 
-test("Character API - backstory", async ({request}) => {
-
-    // if (!process.env.characters) {
-    //     console.log("CHARACTERS is not defined, skipping tests...");
-    //     process.exit(0);
-    // }
-    
-    const myChar = 'Yokai'
 
 
 
-    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/backstory?access_token=${API_KEY}`)
-    await expect(response.status()).toBe(200)
-    
-
-    const responseBody = JSON.parse(await response.text())
-    //await console.log(responseBody)
-
-    await expect(responseBody).toBeTruthy()
-    
-
-
-})
-
-
+// region Character List
 test("Character API - Character List", async ({request}) => {
 
     // if (!process.env.characters) {
@@ -113,3 +92,91 @@ test("Character API - Character List", async ({request}) => {
 
 
 })
+// endregion
+
+// region Backstory
+test("Character API - backstory", async ({request}) => {
+
+    // if (!process.env.characters) {
+    //     console.log("CHARACTERS is not defined, skipping tests...");
+    //     process.exit(0);
+    // }
+    
+    const myChar = 'Yokai'
+
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/backstory?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    //await console.log(responseBody)
+
+    await expect(responseBody).toBeTruthy()
+    
+
+
+})
+// endregion
+
+
+// region Build Tabs
+test("Character API - buildtabs", async ({request}) => {
+
+    // if (!process.env.characters) {
+    //     console.log("CHARACTERS is not defined, skipping tests...");
+    //     process.exit(0);
+    // }
+    
+    const myChar = 'Yokai'
+
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/buildtabs?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    //await console.log(responseBody)
+
+    await expect(responseBody).toBeTruthy()
+    
+
+
+})
+// endregion
+
+// region Build Tabs
+test("Character API - Core", async ({request}) => {
+
+    // if (!process.env.characters) {
+    //     console.log("CHARACTERS is not defined, skipping tests...");
+    //     process.exit(0);
+    // }
+    
+    const myChar = 'Yokai'
+
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/core?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    //await console.log(responseBody)
+
+    await expect(responseBody.race).toBe("Asura")
+    await expect(responseBody.gender).toBe("Male")
+    await expect(responseBody.profession).toBe("Guardian")
+    await expect(responseBody.level).toBe(80)
+    await expect(responseBody.guild).toBe("27C7E87E-116F-EA11-81A8-C983E8889009") //this changes based on what is represented
+    await expect(responseBody.age).toBeGreaterThan(2000000)
+    await expect(responseBody.created).toBe("2012-08-25T04:51:00Z")
+    await expect(responseBody.deaths).toBeGreaterThan(1000)
+    await expect(responseBody.title).toBeTruthy() // this changes based on what is selected
+    
+
+
+})
+// endregion
