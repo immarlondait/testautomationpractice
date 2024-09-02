@@ -5,6 +5,7 @@ require('dotenv').config()
 const API_KEY = process.env.API_KEY
 
 
+// region Initial API test
 test("Character API - Status test - 200 success", async ({request}) => {
 
     // if (!process.env.API_KEY) {
@@ -39,6 +40,33 @@ test("Character API - Status test - 401 fail", async ({request}) => {
 
 
 })
+
+// endregion
+
+test("Character API - backstory", async ({request}) => {
+
+    // if (!process.env.characters) {
+    //     console.log("CHARACTERS is not defined, skipping tests...");
+    //     process.exit(0);
+    // }
+    
+    const myChar = 'Yokai'
+
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/backstory?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    //await console.log(responseBody)
+
+    await expect(responseBody).toBeTruthy()
+    
+
+
+})
+
 
 test("Character API - Character List", async ({request}) => {
 
