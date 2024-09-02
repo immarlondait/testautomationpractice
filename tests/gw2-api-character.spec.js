@@ -3,6 +3,7 @@ require('dotenv').config()
 
 
 const API_KEY = process.env.API_KEY
+const myChar = 'Yokai'
 
 
 // region Initial API test
@@ -25,11 +26,6 @@ test("Character API - Status test - 200 success", async ({request}) => {
 
 test("Character API - Status test - 401 fail", async ({request}) => {
 
-    // if (!process.env.characters) {
-    //     console.log("CHARACTERS is not defined, skipping tests...");
-    //     process.exit(0);
-    // }
-    
 
     const response = await request.get(`https://api.guildwars2.com/v2/characters?access_token=bad_key`)
     await expect(response.status()).toBe(401)
@@ -49,10 +45,6 @@ test("Character API - Status test - 401 fail", async ({request}) => {
 // region Character List
 test("Character API - Character List", async ({request}) => {
 
-    // if (!process.env.characters) {
-    //     console.log("CHARACTERS is not defined, skipping tests...");
-    //     process.exit(0);
-    // }
 
     const response = await request.get(`https://api.guildwars2.com/v2/characters?access_token=${API_KEY}`)
     await expect(response.status()).toBe(200)
@@ -102,10 +94,7 @@ test("Character API - backstory", async ({request}) => {
     //     process.exit(0);
     // }
     
-    const myChar = 'Yokai'
-
-
-
+ 
     const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/backstory?access_token=${API_KEY}`)
     await expect(response.status()).toBe(200)
     
@@ -124,14 +113,6 @@ test("Character API - backstory", async ({request}) => {
 // region Build Tabs
 test("Character API - buildtabs", async ({request}) => {
 
-    // if (!process.env.characters) {
-    //     console.log("CHARACTERS is not defined, skipping tests...");
-    //     process.exit(0);
-    // }
-    
-    const myChar = 'Yokai'
-
-
 
     const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/buildtabs?access_token=${API_KEY}`)
     await expect(response.status()).toBe(200)
@@ -147,16 +128,8 @@ test("Character API - buildtabs", async ({request}) => {
 })
 // endregion
 
-// region Build Tabs
+// region Core
 test("Character API - Core", async ({request}) => {
-
-    // if (!process.env.characters) {
-    //     console.log("CHARACTERS is not defined, skipping tests...");
-    //     process.exit(0);
-    // }
-    
-    const myChar = 'Yokai'
-
 
 
     const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/core?access_token=${API_KEY}`)
@@ -175,6 +148,73 @@ test("Character API - Core", async ({request}) => {
     await expect(responseBody.created).toBe("2012-08-25T04:51:00Z")
     await expect(responseBody.deaths).toBeGreaterThan(1000)
     await expect(responseBody.title).toBeTruthy() // this changes based on what is selected
+    
+
+
+})
+// endregion
+
+// region Crafting
+test("Character API - Crafting", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/crafting?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    //wait console.log(responseBody)
+    //await console.log(responseBody.crafting[0].active)
+
+    //test active
+    await expect(responseBody.crafting[0].discipline).toBe("Armorsmith")
+    await expect(responseBody.crafting[0].rating).toBe(500)
+    await expect(responseBody.crafting[0].active).toBe(true)
+
+    //test inactive
+    await expect(responseBody.crafting[2].discipline).toBe("Weaponsmith")
+    await expect(responseBody.crafting[2].rating).toBe(43)
+    await expect(responseBody.crafting[2].active).toBe(false)
+    
+
+
+})
+// endregion
+
+// region Equipment
+test("Character API - Equipment", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/equipment?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    //await console.log(responseBody)
+    //await console.log(responseBody.crafting[0].active)
+
+    //test active
+    await expect(responseBody).toBeTruthy()
+    
+
+
+})
+// endregion
+
+// region Equipment Tabs
+test("Character API - Equipment Tabs", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/equipmenttabs?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    await console.log(responseBody)
+    //await console.log(responseBody.crafting[0].active)
+
+    //test active
+    await expect(responseBody).toBeTruthy()
     
 
 
