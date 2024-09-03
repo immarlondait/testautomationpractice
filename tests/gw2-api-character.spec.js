@@ -191,7 +191,6 @@ test("Character API - Equipment", async ({request}) => {
 
     const responseBody = JSON.parse(await response.text())
     //await console.log(responseBody)
-    //await console.log(responseBody.crafting[0].active)
 
     //test active
     await expect(responseBody).toBeTruthy()
@@ -210,8 +209,45 @@ test("Character API - Equipment Tabs", async ({request}) => {
     
 
     const responseBody = JSON.parse(await response.text())
-    await console.log(responseBody)
-    //await console.log(responseBody.crafting[0].active)
+    //await console.log(responseBody)
+
+    //test active
+    await expect(responseBody).toBeTruthy()
+    
+
+
+})
+// endregion
+
+// region Hero Points
+test("Character API - Hero Points", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/heropoints?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    //await console.log(responseBody)
+
+    //test active
+    await expect(responseBody).toBeTruthy()
+    
+
+
+})
+// endregion
+
+// region Inventory
+test("Character API - Inventory", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/inventory?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    //await console.log(responseBody)
 
     //test active
     await expect(responseBody).toBeTruthy()
