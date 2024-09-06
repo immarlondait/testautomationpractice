@@ -16,6 +16,7 @@ test('Alert with OK', async ({page}) =>{
         // The button we'll press when it comes up
         await dialog.accept()
     })
+    
     // We need above Alert Handler code block to be able to validate the alert box from below
     await page.click("button[onclick='myFunctionAlert()']")
 
