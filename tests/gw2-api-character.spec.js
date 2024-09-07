@@ -275,3 +275,22 @@ test("Character API - Quests", async ({request}) => {
 
 })
 // endregion
+
+// region Recipes
+test("Character API - Recipes", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/characters/${myChar}/recipes?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+    
+
+    const responseBody = JSON.parse(await response.text())
+    // await console.log(responseBody)
+
+    //test active
+    await expect(responseBody).toBeTruthy()
+    
+
+
+})
+// endregion
