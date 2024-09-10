@@ -71,6 +71,7 @@ test("Character API - Character List", async ({request}) => {
 
     
 
+    
     await expect(responseBody).toContain("Yokai")
     await expect(responseBody).toContain("Poufsouffle")
     await expect(responseBody).toContain("Rinne Snow")
