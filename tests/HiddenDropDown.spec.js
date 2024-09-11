@@ -14,7 +14,7 @@ test('Hidden options dropdown', async ({page}) =>{
 
 
     // Subunit locator
-    await page.locator("//div[7]//div[1]//div[2]//div[1]//div[1]//div[1]").click()
+    await page.locator("div:nth-child(7) div:nth-child(1) div:nth-child(2) div:nth-child(1) div:nth-child(1) div:nth-child(1)").click()
 
     // waiting for options
     await page.waitForTimeout(2000)
