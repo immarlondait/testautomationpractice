@@ -11,7 +11,7 @@ class AutomationPage {
       this.maleRadio = '#male' // Male Radio button
       this.femaleRadio = '#female' //Female Radio button
 
-      this.sundayCheckbox = '#sunday'
+      this.sundayCheckbox = '#sunday' // Days of the week checkbox
       this.mondayCheckbox = '#monday'
       this.tuesdayCheckbox = '#tuesday'
       this.wednesdayCheckbox = '#wednesday'
@@ -19,7 +19,8 @@ class AutomationPage {
       this.fridayCheckbox = '#friday'
       this.saturdayCheckbox = '#saturday'
 
-      
+      this.countryDropdown = '#country' // Country dropdown
+
 
     }
   
@@ -31,6 +32,16 @@ class AutomationPage {
     // Action to fill in email
     async enterPassword(email) {
       await this.page.fill(this.emailField, email);
+    }
+
+    // Action to fill in phone
+    async enterPhoned(phone) {
+      await this.page.fill(this.phoneField, phone);
+    }
+
+    // Action to fill in address
+    async enterPassword(address) {
+      await this.page.fill(this.addressField, address);
     }
   
 
