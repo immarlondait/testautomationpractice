@@ -26,6 +26,9 @@ class AutomationPage {
       this.colorGreen = "option[value='green']"   // Color - Green
       this.colorYellow = "option[value='yellow']" // Color - Yellow
 
+      this.opencartLink = "//a[normalize-space()='open cart']"    //open cart link
+      this.orangehrmLink = "//a[normalize-space()='orange HRM']"  //orange HRM link
+      this.homeLink = "//a[normalize-space()='Home']"             //home page link
 
     }
   
