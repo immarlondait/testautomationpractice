@@ -61,3 +61,15 @@ test("Account  API - Build Storage ", async ({request}) => {
 })
 // endregion
 
+// region Daily Crafting
+test("Account  API - Daily Crafting ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/dailycrafting?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
