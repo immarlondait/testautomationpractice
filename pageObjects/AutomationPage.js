@@ -8,8 +8,8 @@ class AutomationPage {
       this.phoneField = '#phone'                  // Locator for phone field
       this.addressField = '#textarea'             // Locator for Addresse field
 
-      this.maleRadio = '#male'                    // Male Radio button
-      this.femaleRadio = '#female'                //Female Radio button
+      this.maleRadioId = '#male'                    // Male Radio button
+      this.femaleRadioId = '#female'                //Female Radio button
 
       this.sundayCheckbox = '#sunday'             // Days of the week checkbox
       this.mondayCheckbox = '#monday'
