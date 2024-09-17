@@ -11,13 +11,13 @@ class AutomationPage {
       this.maleRadioId = '#male'                    // Male Radio button
       this.femaleRadioId = '#female'                //Female Radio button
 
-      this.sundayCheckbox = '#sunday'             // Days of the week checkbox
-      this.mondayCheckbox = '#monday'
-      this.tuesdayCheckbox = '#tuesday'
-      this.wednesdayCheckbox = '#wednesday'
-      this.thursdayCheckbox = '#thursday'
-      this.fridayCheckbox = '#friday'
-      this.saturdayCheckbox = '#saturday'
+      this.sundayCheckboxId = '#sunday'             // Days of the week checkbox
+      this.mondayCheckboxId = '#monday'
+      this.tuesdayCheckboxId = '#tuesday'
+      this.wednesdayCheckboxId = '#wednesday'
+      this.thursdayCheckboxId = '#thursday'
+      this.fridayCheckboxId = '#friday'
+      this.saturdayCheckboxId = '#saturday'
 
       this.countryDropdown = '#country'           // Country dropdown
 
