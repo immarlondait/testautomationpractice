@@ -19,16 +19,16 @@ class AutomationPage {
       this.fridayCheckboxId = '#friday'
       this.saturdayCheckboxId = '#saturday'
 
-      this.countryDropdown = '#country'           // Country dropdown
+      this.countryDropdownId = '#country'           // Country dropdown
 
-      this.colorRed = "option[value='red']"       // Color - Red
-      this.colorBlue = "option[value='blue']"     // Color - Blue
-      this.colorGreen = "option[value='green']"   // Color - Green
-      this.colorYellow = "option[value='yellow']" // Color - Yellow
+      this.colorRedCSS = "option[value='red']"       // Color - Red
+      this.colorBlueCSS = "option[value='blue']"     // Color - Blue
+      this.colorGreenCSS = "option[value='green']"   // Color - Green
+      this.colorYellowCSS = "option[value='yellow']" // Color - Yellow
 
-      this.opencartLink = "//a[normalize-space()='open cart']"    //open cart link
-      this.orangehrmLink = "//a[normalize-space()='orange HRM']"  //orange HRM link
-      this.homeLink = "//a[normalize-space()='Home']"             //home page link
+      this.opencartLinkXPath = "//a[normalize-space()='open cart']"    //open cart link
+      this.orangehrmLinkXPath = "//a[normalize-space()='orange HRM']"  //orange HRM link
+      this.homeLinkXPath = "//a[normalize-space()='Home']"             //home page link
 
     }
   
