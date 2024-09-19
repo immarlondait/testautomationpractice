@@ -30,6 +30,8 @@ class AutomationPage {
       this.orangehrmLinkXPath = "//a[normalize-space()='orange HRM']"  //orange HRM link
       this.homeLinkXPath = "//a[normalize-space()='Home']"             //home page link
 
+      this.webTableCSS = "table[name='BookTable']"
+
     }
   
     // region Text Input Fields
