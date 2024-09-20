@@ -1,5 +1,7 @@
 // pageObjects/AutomationPage.js
 class AutomationPage {
+
+    // region Constructor
     constructor(page) {
       this.page = page;
 
@@ -32,7 +34,10 @@ class AutomationPage {
 
       this.webTableCSS = "table[name='BookTable']"
 
+      this.paginationTableID = '#productTable'
+
     }
+    // endregion
   
     // region Text Input Fields
     // Action to fill in name
