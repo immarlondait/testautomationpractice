@@ -36,6 +36,8 @@ class AutomationPage {
 
       this.paginationTableID = '#productTable'
 
+      this.submitBtnID = '#FSsubmit'
+
     }
     // endregion
   
