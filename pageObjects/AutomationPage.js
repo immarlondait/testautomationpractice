@@ -38,6 +38,9 @@ class AutomationPage {
 
       this.submitBtnID = '#FSsubmit'
 
+      this.genderMaleRadioId = '#RESULT_RadioButton-1_0'
+      this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
+
     }
     // endregion
   
