@@ -38,6 +38,8 @@ class AutomationPage {
 
       this.submitBtnID = '#FSsubmit'
 
+      this.newBrowserWindowBtnCSS = "button[onclick='myFunction()']"
+
       this.genderMaleRadioId = '#RESULT_RadioButton-1_0'
       this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
 
