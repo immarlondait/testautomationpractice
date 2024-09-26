@@ -41,6 +41,7 @@ class AutomationPage {
       this.newBrowserWindowBtnCSS = "button[onclick='myFunction()']"
 
       this.alertBtnCSS = "button[onclick='myFunctionAlert()']"
+      this.confirmBtnCSS = "button[onclick='myFunctionConfirm()']"
 
       this.genderMaleRadioId = '#RESULT_RadioButton-1_0'
       this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
