@@ -42,6 +42,7 @@ class AutomationPage {
 
       this.alertBtnCSS = "button[onclick='myFunctionAlert()']"
       this.confirmBtnCSS = "button[onclick='myFunctionConfirm()']"
+      this.promptBtnCSS = "button[onclick='myFunctionPrompt()']"
 
       this.genderMaleRadioId = '#RESULT_RadioButton-1_0'
       this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
