@@ -75,6 +75,14 @@ class AutomationPage {
     }
     // endregion
 
+
+    // Action to fill in address
+    async enterFieldText(text) {
+      await this.page.fill(this.field1ID, text);
+    }
+    // endregion
+    
+
   
 
   }
