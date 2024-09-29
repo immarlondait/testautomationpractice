@@ -46,6 +46,7 @@ class AutomationPage {
 
       this.field1ID = "#field1"
       this.field2ID = "#field2"
+      this.copyTextBtnXPath = "//button[normalize-space()='Copy Text']"
 
       this.genderMaleRadioId = '#RESULT_RadioButton-1_0'
       this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
