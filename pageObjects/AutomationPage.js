@@ -1,4 +1,6 @@
 // pageObjects/AutomationPage.js
+// https://testautomationpractice.blogspot.com/
+
 class AutomationPage {
 
     // region Constructor
@@ -50,6 +52,9 @@ class AutomationPage {
 
       this.genderMaleRadioId = '#RESULT_RadioButton-1_0'
       this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
+
+      this.XPathAxesSection1CSS = "#section1"
+      
 
     }
     // endregion
