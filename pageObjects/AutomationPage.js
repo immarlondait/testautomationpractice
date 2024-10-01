@@ -54,7 +54,8 @@ class AutomationPage {
       this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
 
       this.XPathAxesSection1CSS = "#section1"
-      
+      this.XPathAxesSection2CSS = "#section2"
+
 
     }
     // endregion
