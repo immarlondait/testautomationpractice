@@ -55,6 +55,7 @@ class AutomationPage {
 
       this.XPathAxesSection1CSS = "#section1"
       this.XPathAxesSection2CSS = "#section2"
+      this.XPathAxesSection3CSS = "#section3"
 
 
     }
