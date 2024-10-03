@@ -53,9 +53,14 @@ class AutomationPage {
       this.genderMaleRadioId = '#RESULT_RadioButton-1_0'
       this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
 
-      this.XPathAxesSection1CSS = "#section1"
-      this.XPathAxesSection2CSS = "#section2"
-      this.XPathAxesSection3CSS = "#section3"
+      this.XPathAxesSection1TextCSS = "#section1"
+      this.XPathAxesSection1BtnCSS = "#btn1"
+
+      this.XPathAxesSection2TextCSS = "#section2"
+      this.XPathAxesSection2BtnCSS = "#btn2"
+      
+      this.XPathAxesSection3TextCSS = "#section3"
+      this.XPathAxesSection3BtnCSS = "#btn3"
 
 
     }
