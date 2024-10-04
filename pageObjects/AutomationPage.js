@@ -64,6 +64,8 @@ class AutomationPage {
 
       this.MobilesID = "#mobiles"
 
+      this.LaptopsAppleID = "#apple"
+
 
     }
     // endregion
