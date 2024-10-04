@@ -58,9 +58,11 @@ class AutomationPage {
 
       this.XPathAxesSection2TextCSS = "#section2"
       this.XPathAxesSection2BtnCSS = "#btn2"
-      
+
       this.XPathAxesSection3TextCSS = "#section3"
       this.XPathAxesSection3BtnCSS = "#btn3"
+
+      this.MobilesID = "#mobiles"
 
 
     }
