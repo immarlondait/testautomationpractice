@@ -65,6 +65,7 @@ class AutomationPage {
       this.MobilesID = "#mobiles"
 
       this.LaptopsAppleID = "#apple"
+      this.LaptopsLenovoID = "#lenovo"
 
 
     }
