@@ -11,7 +11,7 @@ test('Form Fill', async ({page}) =>{
 
     await expect(await page.locator('#name')).toHaveValue('Marlon Dait')
     await expect(await page.locator('#email')).toHaveValue('immarlondait@gmail.com')
-    await expect(await page.locator('#phone')).toHaveValue('111-222-3333')
+    await expect(await page.locator('#phone')).toHaveValue('111-222-33')
     await expect(await page.locator('#textarea')).toHaveValue('Lorem Ipsum')
 
 
