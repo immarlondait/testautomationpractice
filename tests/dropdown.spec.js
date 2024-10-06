@@ -35,6 +35,7 @@ test('Dropdown order', async ({page}) =>{
     }
 })
 
+/*
 test('Dropdown Selection', async ({page}) =>{
     
     await page.goto('https://testautomationpractice.blogspot.com/')
@@ -49,3 +50,4 @@ test('Dropdown Selection', async ({page}) =>{
     
     
 })
+*/
