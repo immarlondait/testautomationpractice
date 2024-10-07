@@ -36,17 +36,20 @@ test('Dropdown order', async ({page}) =>{
 })
 
 /*
+
+
+
 test('Dropdown Selection', async ({page}) =>{
     
     await page.goto('https://testautomationpractice.blogspot.com/')
     await expect(page).toHaveURL('https://testautomationpractice.blogspot.com/')
 
-    await page.selectOption('#country', 'Japan')
+    await page.selectOption('#country', 'France')
 
     const selectedOption = await page.$eval('#country option:checked', element => element.textContent);
     // console.log("Dropdown current selecting: ", selectedOption)
 
-    await expect(selectedOption).toBe('Japan')
+    await expect(selectedOption).toBe('France')
     
     
 })
