@@ -64,11 +64,14 @@ class AutomationPage {
 
       this.MobilesID = "#mobiles"
 
+
       this.mobileSamsung = "#samsung"
+      this.mobileRealMe = "#realme"
 
       this.LaptopsAppleID = "#apple"
       this.LaptopsLenovoID = "#lenovo"
       this.LaptopsDellID = "#dell"
+      
 
 
     }
