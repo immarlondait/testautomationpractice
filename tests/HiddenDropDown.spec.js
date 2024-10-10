@@ -2,7 +2,7 @@ const {test, expect} = require('@playwright/test')
 
 test('Hidden options dropdown', async ({page}) =>{
 
-    await page.goto('https://opensource-demo.orangehrmlive.com/auth/login')
+    await page.goto('https://opensource-demo.orangehrmlive.com')
 
     // We use SelectorsHub Debug feature, click and then open dropdown within 5 seconds of pressing Debug
 
