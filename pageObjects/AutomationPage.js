@@ -42,6 +42,8 @@ class AutomationPage {
 
       this.newBrowserWindowBtnCSS = "button[onclick='myFunction()']"
 
+      this.dynamicButtonStartCSS = "button[name='start']"
+
       this.alertBtnCSS = "button[onclick='myFunctionAlert()']"
       this.confirmBtnCSS = "button[onclick='myFunctionConfirm()']"
       this.promptBtnCSS = "button[onclick='myFunctionPrompt()']"
