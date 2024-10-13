@@ -42,7 +42,9 @@ class AutomationPage {
 
       this.newBrowserWindowBtnCSS = "button[onclick='myFunction()']"
 
+      //below button changes state when clicked into the other
       this.dynamicButtonStartCSS = "button[name='start']"
+      this.dynamicButtonStopCSS = "button[name='stop']"
 
       this.alertBtnCSS = "button[onclick='myFunctionAlert()']"
       this.confirmBtnCSS = "button[onclick='myFunctionConfirm()']"
