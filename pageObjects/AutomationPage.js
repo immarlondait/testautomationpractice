@@ -46,6 +46,8 @@ class AutomationPage {
       this.dynamicButtonStartCSS = "button[name='start']"
       this.dynamicButtonStopCSS = "button[name='stop']"
 
+      this.newTabButtonXPath = "//button[normalize-space()='New Tab']"
+
       this.alertBtnCSS = "button[onclick='myFunctionAlert()']"
       this.confirmBtnCSS = "button[onclick='myFunctionConfirm()']"
       this.promptBtnCSS = "button[onclick='myFunctionPrompt()']"
