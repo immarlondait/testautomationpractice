@@ -52,6 +52,8 @@ class AutomationPage {
       this.confirmBtnCSS = "button[onclick='myFunctionConfirm()']"
       this.promptBtnCSS = "button[onclick='myFunctionPrompt()']"
 
+      this.popupWindowID = "#PopUp"
+
       this.field1ID = "#field1"
       this.field2ID = "#field2"
       this.copyTextBtnXPath = "//button[normalize-space()='Copy Text']"
