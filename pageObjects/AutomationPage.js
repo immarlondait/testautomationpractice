@@ -80,6 +80,8 @@ class AutomationPage {
       this.LaptopsAppleID = "#apple"
       this.LaptopsLenovoID = "#lenovo"
       this.LaptopsDellID = "#dell"
+
+      this.DynamicWebTableID = "#taskTable"
       
 
 
