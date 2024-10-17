@@ -105,7 +105,7 @@ class AutomationPage {
     }
 
     // Action to fill in address
-    async enterPassword(address) {
+    async enterAddress(address) {
       await this.page.fill(this.addressField, address);
     }
     // endregion
