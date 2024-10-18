@@ -89,32 +89,32 @@ class AutomationPage {
     // endregion
   
     // region Text Input Fields
-    // Action to fill in name
     async enterName(name) {
       await this.page.fill(this.nameField, name);
     }
   
-    // Action to fill in email
     async enterPassword(email) {
       await this.page.fill(this.emailField, email);
     }
 
-    // Action to fill in phone
+
     async enterPhoned(phone) {
       await this.page.fill(this.phoneField, phone);
     }
 
-    // Action to fill in address
+
     async enterAddress(address) {
       await this.page.fill(this.addressField, address);
     }
-    // endregion
 
 
-    // Action to fill in address
     async enterFieldText(text) {
       await this.page.fill(this.field1ID, text);
     }
+
+
+
+    
     // endregion
     
 
