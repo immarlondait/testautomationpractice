@@ -58,6 +58,8 @@ class AutomationPage {
       this.field2ID = "#field2"
       this.copyTextBtnXPath = "//button[normalize-space()='Copy Text']"
 
+      this.dragAndDropXPath = "//p[normalize-space()='Drag me to my target']"
+
       this.genderMaleRadioId = '#RESULT_RadioButton-1_0'
       this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
 
@@ -114,7 +116,7 @@ class AutomationPage {
 
 
 
-    
+
     // endregion
     
 
