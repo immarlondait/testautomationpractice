@@ -59,6 +59,7 @@ class AutomationPage {
       this.copyTextBtnXPath = "//button[normalize-space()='Copy Text']"
 
       this.dragAndDropXPath = "//p[normalize-space()='Drag me to my target']"
+      this.dragToHereID = "//div[@id='droppable']"
 
       this.genderMaleRadioId = '#RESULT_RadioButton-1_0'
       this.genderFemaleRadioId = '#RESULT_RadioButton-1_1'
