@@ -85,6 +85,8 @@ class AutomationPage {
       this.LaptopsDellID = "#dell"
 
       this.DynamicWebTableID = "#taskTable"
+
+      this.priceRangeSliderLeftXPath = "//div[@id='slider-range']//span[1]"
       
 
 
