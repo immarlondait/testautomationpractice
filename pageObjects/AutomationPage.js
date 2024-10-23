@@ -88,7 +88,9 @@ class AutomationPage {
 
       this.priceRangeSliderLeftXPath = "//div[@id='slider-range']//span[1]"
       this.priceRangeSliderRightXPath = "//div[@id='slider-range']//span[2]"
-      
+
+      this.SVGElementCircleCSS = "circle[cx='15']"
+
       
 
 
