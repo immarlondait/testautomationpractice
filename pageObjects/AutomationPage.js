@@ -90,6 +90,8 @@ class AutomationPage {
       this.priceRangeSliderRightXPath = "//div[@id='slider-range']//span[2]"
 
       this.SVGElementCircleCSS = "circle[cx='15']"
+      this.SVGElementRectCSS = "rect[x='3']"
+      this.SVGElementTriXPath = "polygon[points='15,3 3,27 27,27']"
 
       
 
