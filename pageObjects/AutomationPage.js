@@ -93,6 +93,7 @@ class AutomationPage {
       this.SVGElementRectCSS = "rect[x='3']"
       this.SVGElementTriXPath = "polygon[points='15,3 3,27 27,27']"
 
+      this.BrokenLinkErrorcode400XPath = "//a[normalize-space()='Errorcode 400']"
       
 
 
