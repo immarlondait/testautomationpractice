@@ -96,6 +96,7 @@ class AutomationPage {
       this.BrokenLinkErrorcode400XPath = "//a[normalize-space()='Errorcode 400']"
       this.BrokenLinkErrorcode401XPath = "//a[normalize-space()='Errorcode 401']"
       this.BrokenLinkErrorcode403XPath = "//a[normalize-space()='Errorcode 403']"
+      this.BrokenLinkErrorcode404XPath = "//a[normalize-space()='Errorcode 404']"
       
 
 
