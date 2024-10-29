@@ -97,6 +97,12 @@ class AutomationPage {
       this.BrokenLinkErrorcode401XPath = "//a[normalize-space()='Errorcode 401']"
       this.BrokenLinkErrorcode403XPath = "//a[normalize-space()='Errorcode 403']"
       this.BrokenLinkErrorcode404XPath = "//a[normalize-space()='Errorcode 404']"
+      // more to add
+
+      this.FormSection1InputID = "#input1"
+      this.FormSection1SubmitID = "#btn1"
+
+
       
 
 
