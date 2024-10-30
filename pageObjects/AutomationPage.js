@@ -101,6 +101,8 @@ class AutomationPage {
 
       this.FormSection1InputID = "#input1"
       this.FormSection1SubmitID = "#btn1"
+      this.FormSection2InputID = "#input2"
+      this.FormSection2SubmitID = "#btn2"
 
 
       
