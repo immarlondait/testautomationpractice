@@ -106,6 +106,7 @@ class AutomationPage {
       this.FormSection3InputID = "#input3"
       this.FormSection3SubmitID = "#btn3"
 
+      this.FooterLinksHomeXPath = "//a[@href='http://testautomationpractice.blogspot.com/']"
 
       
 
