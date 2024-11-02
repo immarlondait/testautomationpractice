@@ -107,6 +107,7 @@ class AutomationPage {
       this.FormSection3SubmitID = "#btn3"
 
       this.FooterLinksHomeXPath = "//a[@href='http://testautomationpractice.blogspot.com/']"
+      this.FooterLinksHiddenElementsAndAJAXXPath = "//a[normalize-space()='Hidden Elements & AJAX']"
 
       
 
