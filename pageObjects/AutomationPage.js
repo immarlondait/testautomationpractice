@@ -108,6 +108,7 @@ class AutomationPage {
 
       this.FooterLinksHomeXPath = "//a[@href='http://testautomationpractice.blogspot.com/']"
       this.FooterLinksHiddenElementsAndAJAXXPath = "//a[normalize-space()='Hidden Elements & AJAX']"
+      this.FooterLinksDownloadFilesXPath = "//a[normalize-space()='Download Files']"
 
       
 
