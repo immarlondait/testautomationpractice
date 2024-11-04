@@ -110,6 +110,8 @@ class AutomationPage {
       this.FooterLinksHiddenElementsAndAJAXXPath = "//a[normalize-space()='Hidden Elements & AJAX']"
       this.FooterLinksDownloadFilesXPath = "//a[normalize-space()='Download Files']"
 
+      this.CPULoadXPath = "//strong[@class='chrome-cpu']"
+
       
 
 
