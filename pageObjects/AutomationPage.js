@@ -111,7 +111,7 @@ class AutomationPage {
       this.FooterLinksDownloadFilesXPath = "//a[normalize-space()='Download Files']"
 
       this.CPULoadXPath = "//strong[@class='chrome-cpu']"
-
+      this.MemorySizeFirefoxProcessXPath = "//strong[@class='firefox-memory']""
       
 
 
