@@ -113,6 +113,7 @@ class AutomationPage {
       this.CPULoadXPath = "//strong[@class='chrome-cpu']"
       this.MemorySizeFirefoxProcessXPath = "//strong[@class='firefox-memory']"
       this.NetworkSpeedChromeProcessXPath = "//strong[@class='chrome-network']"
+      this.DiskSpaceFirefoxProcessXPath = "//strong[@class='firefox-disk']"
       
 
 
