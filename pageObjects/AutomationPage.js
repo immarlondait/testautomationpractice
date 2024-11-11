@@ -100,6 +100,7 @@ class AutomationPage {
       this.BrokenLinkErrorcode408XPath = "//a[normalize-space()='Errorcode 408']"
       this.BrokenLinkErrorcode500XPath = "//a[normalize-space()='Errorcode 500']"
       this.BrokenLinkErrorcode502XPath = "//a[normalize-space()='Errorcode 502']"
+      this.BrokenLinkErrorcode503XPath = "//a[normalize-space()='Errorcode 503']"
       // more to add
 
       this.FormSection1InputID = "#input1"
