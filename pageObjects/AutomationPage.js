@@ -118,6 +118,8 @@ class AutomationPage {
       this.MemorySizeFirefoxProcessXPath = "//strong[@class='firefox-memory']"
       this.NetworkSpeedChromeProcessXPath = "//strong[@class='chrome-network']"
       this.DiskSpaceFirefoxProcessXPath = "//strong[@class='firefox-disk']"
+
+      this.VisitorCounterID = "#Stats1_totalCount"
       
 
 
