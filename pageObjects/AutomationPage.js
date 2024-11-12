@@ -120,6 +120,8 @@ class AutomationPage {
       this.DiskSpaceFirefoxProcessXPath = "//strong[@class='firefox-disk']"
 
       this.VisitorCounterID = "#Stats1_totalCount"
+
+      this.MouseHoverBtnXPath = "//button[normalize-space()='Point Me']"
       
 
 
