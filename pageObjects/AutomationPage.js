@@ -122,6 +122,10 @@ class AutomationPage {
       this.VisitorCounterID = "#Stats1_totalCount"
 
       this.MouseHoverBtnXPath = "//button[normalize-space()='Point Me']"
+      this.DropdownMobilesXPath = "//a[normalize-space()='Mobiles']"          //currently at 11/13/24 this is dependent on the btn "Point Me" being hovered over 
+
+
+
       
 
 
