@@ -127,6 +127,7 @@ class AutomationPage {
 
 
 
+      this.ComboBoxXPath = "//input[@id='comboBox']"
       
 
 
