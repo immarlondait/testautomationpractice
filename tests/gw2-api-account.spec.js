@@ -86,3 +86,16 @@ test("Account  API - Dungeons ", async ({request}) => {
 
 })
 // endregion
+
+// region Dyes
+test("Account  API - Dyes ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/dyes?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
