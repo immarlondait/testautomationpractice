@@ -112,3 +112,16 @@ test("Account  API - Emotes ", async ({request}) => {
 
 })
 // endregion
+
+// region Finishers
+test("Account  API - Finishers ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/finishers?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
