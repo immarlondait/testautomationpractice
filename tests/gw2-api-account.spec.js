@@ -125,3 +125,16 @@ test("Account  API - Finishers ", async ({request}) => {
 
 })
 // endregion
+
+// region Gliders
+test("Account  API - Gliders ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/gliders?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
