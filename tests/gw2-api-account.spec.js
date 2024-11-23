@@ -164,3 +164,16 @@ test("Account  API - Home/cats ", async ({request}) => {
 
 })
 // endregion
+
+// region Home/nodes
+test("Account  API - Home/nodes ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/home/nodes?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
