@@ -191,3 +191,16 @@ test("Account  API - Homestead ", async ({request}) => {
 
 })
 // endregion
+
+// region Homestead/Decorations
+test("Account  API - Homestead/Decorations ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/homestead/decorations?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
