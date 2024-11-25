@@ -192,11 +192,24 @@ test("Account  API - Homestead ", async ({request}) => {
 })
 // endregion
 
-// region Homestead/Decorations
+// region Homestead/Deco
 test("Account  API - Homestead/Decorations ", async ({request}) => {
 
 
     const response = await request.get(`https://api.guildwars2.com/v2/account/homestead/decorations?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
+
+// region Homestead/Glyphs
+test("Account  API - Homestead/Glyphs ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/homestead/glyphs?access_token=${API_KEY}`)
     await expect(response.status()).toBe(200)
 
     const responseBody = JSON.parse(await response.text())
