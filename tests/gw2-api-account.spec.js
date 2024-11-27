@@ -230,3 +230,16 @@ test("Account  API - Inventory ", async ({request}) => {
 
 })
 // endregion
+
+// region Jadebots
+test("Account  API - Jadebots ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/jadebots?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
