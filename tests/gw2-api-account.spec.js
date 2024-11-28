@@ -243,3 +243,16 @@ test("Account  API - Jadebots ", async ({request}) => {
 
 })
 // endregion
+
+// region Legendary Armory
+test("Account  API - Legendary Armory ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/legendaryarmory?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
