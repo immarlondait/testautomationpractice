@@ -321,3 +321,16 @@ test("Account  API - Mastery/Points ", async ({request}) => {
 
 })
 // endregion
+
+// region Mastery/Materials
+test("Account  API - Mastery/Materials ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/mastery/materials?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
