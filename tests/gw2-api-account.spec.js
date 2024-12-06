@@ -334,3 +334,16 @@ test("Account  API - Materials ", async ({request}) => {
 
 })
 // endregion
+
+// region Minis
+test("Account  API - Minis ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/minis?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
