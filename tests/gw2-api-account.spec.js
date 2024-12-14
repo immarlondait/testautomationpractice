@@ -438,3 +438,16 @@ test("Account  API - PvP/Heroes ", async ({request}) => {
 
 })
 // endregion
+
+// region Raids
+test("Account  API - Raids ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/pvp/raids?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
