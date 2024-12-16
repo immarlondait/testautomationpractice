@@ -477,3 +477,16 @@ test("Account  API - Skiffs ", async ({request}) => {
 
 })
 // endregion
+
+// region Skins
+test("Account  API - Skins ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/pvp/skins?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
