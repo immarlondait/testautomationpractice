@@ -490,3 +490,16 @@ test("Account  API - Skins ", async ({request}) => {
 
 })
 // endregion
+
+// region Titles
+test("Account  API - Titles ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/pvp/titles?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
