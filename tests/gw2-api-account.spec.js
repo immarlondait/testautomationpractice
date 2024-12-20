@@ -518,12 +518,27 @@ test("Account  API - Wallet ", async ({request}) => {
 // endregion
 
 // region Wizards Vault
-test("Account  API - Wizards Vault ", async ({request}) => {
+test("Account  API - Wizards Vault/Daily ", async ({request}) => {
 
     // returns 404/503 errors if requested, have to go direct to sub-endpoints
 
 
     const response = await request.get(`https://api.guildwars2.com/v2/account/pvp/wizardsvault/daily?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+
+
+
+test("Account  API - Wizards Vault/listings ", async ({request}) => {
+
+    // returns 404/503 errors if requested, have to go direct to sub-endpoints
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/pvp/wizardsvault/listings?access_token=${API_KEY}`)
     await expect(response.status()).toBe(200)
 
     const responseBody = JSON.parse(await response.text())
