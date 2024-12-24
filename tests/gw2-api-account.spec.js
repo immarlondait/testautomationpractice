@@ -587,3 +587,16 @@ test("Account  API - World Bosses ", async ({request}) => {
 
 })
 // endregion
+
+// region Achievements
+test("Account  API - Achievements ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/account/pvp/achievements?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
