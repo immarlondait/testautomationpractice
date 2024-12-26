@@ -588,11 +588,15 @@ test("Account  API - World Bosses ", async ({request}) => {
 })
 // endregion
 
+
+
+
+
 // region Achievements
-test("Account  API - Achievements ", async ({request}) => {
+test("Achievements ", async ({request}) => {
 
 
-    const response = await request.get(`https://api.guildwars2.com/v2/account/pvp/achievements?access_token=${API_KEY}`)
+    const response = await request.get(`https://api.guildwars2.com/v2/achievements?access_token=${API_KEY}`)
     await expect(response.status()).toBe(200)
 
     const responseBody = JSON.parse(await response.text())
@@ -602,10 +606,23 @@ test("Account  API - Achievements ", async ({request}) => {
 // endregion
 
 // region Achievements/Categories
-test("Account  API - Achievements/Categories ", async ({request}) => {
+test("Achievements/Categories ", async ({request}) => {
 
 
-    const response = await request.get(`https://api.guildwars2.com/v2/account/pvp/achievements/categories?access_token=${API_KEY}`)
+    const response = await request.get(`https://api.guildwars2.com/v2/achievements/categories?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
+
+// region Achievements/Daily
+test("Achievements/Daily ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/achievements/daily?access_token=${API_KEY}`)
     await expect(response.status()).toBe(200)
 
     const responseBody = JSON.parse(await response.text())
