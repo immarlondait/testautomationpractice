@@ -643,3 +643,16 @@ test("Achievements/Daily/Tomorrow ", async ({request}) => {
 
 })
 // endregion
+
+// region Achievements/Groups
+test("Achievements/Daily/Groups ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/achievements/groups?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
