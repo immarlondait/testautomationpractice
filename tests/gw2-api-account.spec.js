@@ -656,3 +656,16 @@ test("Achievements/Daily/Groups ", async ({request}) => {
 
 })
 // endregion
+
+// region Backstory
+test("Backstory ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/backstory?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
