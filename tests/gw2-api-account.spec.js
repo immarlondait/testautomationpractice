@@ -669,3 +669,16 @@ test("Backstory ", async ({request}) => {
 
 })
 // endregion
+
+// region Backstory/Answers
+test("Backstory/Answers ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/backstory/answers?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+// endregion
