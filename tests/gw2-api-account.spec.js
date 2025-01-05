@@ -714,7 +714,7 @@ test("Backstory/Questions ", async ({request}) => {
 
 
 // region Build
-test("Build ", async ({request}) => {
+test("Build", async ({request}) => {
 
 
     const response = await request.get(`https://api.guildwars2.com/v2/build?access_token=${API_KEY}`)
@@ -726,3 +726,21 @@ test("Build ", async ({request}) => {
 })
 
 // endregion
+
+
+
+// region Colors
+test("Colors", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/colors?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+
+// endregion
+
+
