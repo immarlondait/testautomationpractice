@@ -31,6 +31,7 @@ class AutomationPage {
       this.colorYellowCSS = "option[value='yellow']" // Color - Yellow
 
       this.datepickerCSS = "#datepicker"
+      this.datepicker2CSS = "#txtDate"
 
       this.opencartLinkXPath = "//a[normalize-space()='open cart']"    //open cart link
       this.orangehrmLinkXPath = "//a[normalize-space()='orange HRM']"  //orange HRM link
