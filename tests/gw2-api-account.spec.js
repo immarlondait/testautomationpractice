@@ -771,3 +771,17 @@ test("Commerce/Exchange", async ({request}) => {
 })
 
 // endregion
+
+// region /Commerce/Exchange/Coins
+test("Commerce/Exchange/Coins", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/commerce/exchange/coins?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+
+// endregion
