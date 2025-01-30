@@ -127,3 +127,14 @@ test("specializations - Status check ", async ({request}) => {
 
 
 })
+
+test("skiffs - Status check ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/skiffs?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
