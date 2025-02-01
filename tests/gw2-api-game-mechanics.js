@@ -149,3 +149,14 @@ test("skills - Status check ", async ({request}) => {
 
 
 })
+
+test("traits - Status check ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/traits?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
