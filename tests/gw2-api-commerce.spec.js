@@ -55,3 +55,15 @@ test("/commerce/exchange/gems - Status check ", async ({request}) => {
 })
 
 
+test("/commerce/listings - Status check ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/backstory/commerce/listings?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+
+
