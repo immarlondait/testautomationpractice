@@ -3,9 +3,11 @@
 
 class AutomationPage {
 
-    // region Constructor
+  
     constructor(page) {
       this.page = page;
+
+      this.pageTitle = "h1[class='title']"          // Page title
 
       this.nameField = '#name'                    // Locator for name input field
       this.emailField = '#email'                  // Locator for email field
@@ -135,7 +137,6 @@ class AutomationPage {
 
 
     }
-    // endregion
   
     // region Text Input Fields
     async enterName(name) {
