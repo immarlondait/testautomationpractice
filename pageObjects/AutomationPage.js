@@ -9,6 +9,8 @@ class AutomationPage {
 
       this.pageTitle = "h1[class='title']"          // Page title
 
+      this.subTitle = "//span[normalize-space()='For Selenium, Cypress & Playwright']" // Subtitle
+
       this.nameField = '#name'                    // Locator for name input field
       this.emailField = '#email'                  // Locator for email field
       this.phoneField = '#phone'                  // Locator for phone field
