@@ -79,3 +79,15 @@ test("wvw/ranks - Status check ", async ({request}) => {
 })
 
 
+test("wvw/timers - Status check ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v2/wvw/timers?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+
+
