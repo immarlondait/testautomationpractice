@@ -43,4 +43,16 @@ test("map_names - Status check ", async ({request}) => {
 
 })
 
+test("world_names - Status check ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v1/world_names?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+
+
 
