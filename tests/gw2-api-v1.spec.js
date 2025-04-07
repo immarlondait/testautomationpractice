@@ -95,3 +95,16 @@ test("items - Status check ", async ({request}) => {
 
 
 
+test("item_details - Status check ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v1/item_details?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+
+
+
