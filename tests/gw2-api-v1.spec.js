@@ -158,6 +158,21 @@ test("skin_details - Status check ", async ({request}) => {
 
 
 
+})
+
+test("continents - Status check ", async ({request}) => {
+
+
+    const response = await request.get(`https://api.guildwars2.com/v1/continents?access_token=${API_KEY}`)
+    await expect(response.status()).toBe(200)
+
+    const responseBody = JSON.parse(await response.text())
+
+
+})
+
+
+
 
 
 
