@@ -158,7 +158,7 @@ test("skin_details - Status check ", async ({request}) => {
 
 
 
-})
+
 
 test("continents - Status check ", async ({request}) => {
 
@@ -173,7 +173,7 @@ test("continents - Status check ", async ({request}) => {
 
 
 
-})
+
 
 test("maps - Status check ", async ({request}) => {
 
@@ -214,7 +214,6 @@ test("wvw/matches - Status check ", async ({request}) => {
 
 
 })
-
 
 
 
